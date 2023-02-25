@@ -6,7 +6,7 @@
 
 <script setup>
 definePageMeta({
-  layout: false
+  layout: 'default'
 })
 
 const route = useRoute()
