@@ -1,5 +1,11 @@
 <template>
   <div>
+      <Html lang="ja">
+        <Head>
+          <Title>indexページ</Title>
+          <Meta name="description" content="indexページ" />
+        </Head>
+      </Html>
       <h1>Main page</h1>
       <h2>{{ $hello('Wolrd') }}</h2>
       <div>
