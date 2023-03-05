@@ -1,8 +1,9 @@
 <template>
   <nav>
-    <NuxtLink to="/">Home</NuxtLink>
-    <NuxtLink to="/about">About</NuxtLink>
-    <NuxtLink :to="{ name: 'users-list' }">User list</NuxtLink>
-    <NuxtLink to="https://google.com" target="_blank">Google</NuxtLink>
+    <NuxtLink to="/">Home</NuxtLink>&nbsp;
+    <NuxtLink to="/about">About</NuxtLink>&nbsp;
+    <NuxtLink :to="{ name: 'users-list' }">User list</NuxtLink>&nbsp;
+    <NuxtLink to="https://google.com" target="_blank">Google</NuxtLink>&nbsp;
+    <NuxtLink to="/posts">Post List</NuxtLink>
   </nav>
 </template>
