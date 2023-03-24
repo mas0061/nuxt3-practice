@@ -3,8 +3,8 @@
     <h1>Usersページ</h1>
     <p>Count: {{ counter }}</p>
     <!-- <NuxtErrorBoundary @error="someErrorLogger"> -->
-      <NuxtPage />
-      <!-- <template #error="{ error }">
+    <NuxtPage />
+    <!-- <template #error="{ error }">
         <p>{{ error }}</p>
         <button @click="resetError(error)">Clear error</button>
       </template>
@@ -13,12 +13,12 @@
 </template>
 
 <script setup>
-const counter = useCount()
+const counter = useCount();
 const resetError = (error) => {
-  error.value = null
-}
+  error.value = null;
+};
 
 const someErrorLogger = (error) => {
-  console.log('someErrorLogger', error)
-}
+  console.log('someErrorLogger', error);
+};
 </script>

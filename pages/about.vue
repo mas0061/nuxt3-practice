@@ -15,19 +15,19 @@
 definePageMeta({
   layout: 'default',
   middleware: defineNuxtRouteMiddleware((to, from) => {
-    console.log('to', to)
-    console.log('from', from)
+    console.log('to', to);
+    console.log('from', from);
   }),
-  pageTransition: false
-})
+  pageTransition: false,
+});
 
-const route = useRoute()
+const route = useRoute();
 
 const enableCustomLayout = () => {
-  route.meta.layout = 'custom'
-}
+  route.meta.layout = 'custom';
+};
 
-const counter = useCount()
+const counter = useCount();
 
 // const title = ref('Aboutページ')
 // const description = ref('Aboutページ')

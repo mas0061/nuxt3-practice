@@ -13,9 +13,9 @@
 
 useHead({
   titleTemplate: (title) => {
-    return title ? `${title} - Nuxt 3 practice` : 'Nuxt 3 practice'
-  }
-})
+    return title ? `${title} - Nuxt 3 practice` : 'Nuxt 3 practice';
+  },
+});
 </script>
 
 <style>

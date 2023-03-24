@@ -1,3 +1,3 @@
 export function useCount() {
-  return useState(() => 0)
+  return useState(() => 0);
 }

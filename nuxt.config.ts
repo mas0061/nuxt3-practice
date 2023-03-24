@@ -5,9 +5,9 @@ export default defineNuxtConfig({
     // pageTransition: { name: 'page', mode: 'out-in'},
     head: {
       // title: 'Nuxt 3 practice',
-      meta: [{name: 'description', content: 'Nuxt 3 for beginners'}],
-      link: [{rel: 'icon', href: '/favicon.ico'}]
-    }
+      meta: [{ name: 'description', content: 'Nuxt 3 for beginners' }],
+      link: [{ rel: 'icon', href: '/favicon.ico' }],
+    },
   },
   // modules: ['@nuxtjs/tailwindcss']
-})
+});
