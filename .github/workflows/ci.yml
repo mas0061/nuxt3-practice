@@ -29,3 +29,11 @@ jobs:
           fail_below_min: true
           thresholds: '1 75'
           format: markdown
+          badge: true
+          output: both
+      - name: Add coverage to PR comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        if: github.event_name == 'pull_request'
+        with:
+          recreate: true
+          path: code-coverage-results.md
