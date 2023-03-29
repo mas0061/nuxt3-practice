@@ -7,8 +7,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+
 jobs:
-  build:
+  setupAndValidate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -29,3 +32,11 @@ jobs:
           fail_below_min: true
           thresholds: '1 75'
           format: markdown
+          badge: true
+          output: both
+      - name: Add coverage to PR comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        if: github.event_name == 'pull_request'
+        with:
+          recreate: true
+          path: code-coverage-results.md
