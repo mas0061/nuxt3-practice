@@ -16,10 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 18.x
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 18
+          cache: npm
       - name: run 'npm ci'
         run: npm ci
       - name: run ESLint
