@@ -7,7 +7,7 @@
 
 <script setup>
 const error = useError();
-const props = defineProps({
-  error: Object,
+defineProps({
+  error: { type: Object, default: null },
 });
 </script>
