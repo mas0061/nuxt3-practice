@@ -14,11 +14,11 @@
 
 <script setup>
 const counter = useCount();
-const resetError = (error) => {
-  error.value = null;
-};
+// const resetError = (error) => {
+//   error.value = null;
+// };
 
-const someErrorLogger = (error) => {
-  console.log('someErrorLogger', error);
-};
+// const someErrorLogger = (error) => {
+//   console.log('someErrorLogger', error);
+// };
 </script>
