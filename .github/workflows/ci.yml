@@ -12,6 +12,18 @@ permissions:
   checks: write
 
 jobs:
+  checkVulnerability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
+      - name: run 'npm audit'
+        run: npm audit --audit-level moderate
+
   setupAndValidate:
     runs-on: ubuntu-latest
     steps:
@@ -25,6 +37,8 @@ jobs:
         run: npm ci
       - name: run ESLint
         run: npm run lint
+      - name: run build
+        run: npm run build
       - name: run Test
         run: npm run test
       - name: Publish test results
