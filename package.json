@@ -15,7 +15,7 @@
     "@nuxtjs/tailwindcss": "^6.6.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/vue": "^7.0.0",
-    "@typescript-eslint/parser": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.1",
     "@vitest/coverage-c8": "^0.29.8",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
