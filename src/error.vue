@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-const error = useError();
+// const error = useError();
 defineProps({
   error: { type: Object, default: null },
 });
