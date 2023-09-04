@@ -15,7 +15,7 @@ jobs:
   checkVulnerability:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
@@ -27,7 +27,7 @@ jobs:
   setupAndValidate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
