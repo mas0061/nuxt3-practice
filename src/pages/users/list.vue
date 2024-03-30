@@ -14,23 +14,23 @@
 const counter = ref(0);
 const inc = () => {
   throw createError({
-    statusCode: '400',
-    statusMessage: 'Bad Request',
-    message: 'エラー発生',
+    statusCode: "400",
+    statusMessage: "Bad Request",
+    message: "エラー発生",
     fatal: true,
   });
   // counter.value++;
 };
 
 const { data: users } = await useFetch(
-  'https://jsonplaceholder.typicode.com/user/'
+  "https://jsonplaceholder.typicode.com/user/",
 );
-console.log('process');
+console.log("process");
 
 if (!users.value) {
   throw createError({
     statusCode: 404,
-    statusMessage: 'Page not found',
+    statusMessage: "Page not found",
   });
 }
 </script>

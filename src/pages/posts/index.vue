@@ -4,9 +4,9 @@ const {
   error,
   refresh,
   pending,
-} = await useLazyFetch('https://jsonplaceholder.typicode.com/posts/');
+} = await useLazyFetch("https://jsonplaceholder.typicode.com/posts/");
 console.log(useNuxtApp().payload.data);
-console.log('error', error.value);
+console.log("error", error.value);
 </script>
 
 <template>

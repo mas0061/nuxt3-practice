@@ -7,10 +7,10 @@ const router = useRoute();
 console.log(router.params.id);
 
 useHead({
-  title: 'Nuxt 3',
+  title: "Nuxt 3",
   meta: [
     {
-      name: 'description',
+      name: "description",
       content: `User Id: ${router.params.id}`,
     },
   ],
