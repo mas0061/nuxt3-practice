@@ -13,10 +13,10 @@
 
 <script setup>
 definePageMeta({
-  layout: 'default',
+  layout: "default",
   middleware: defineNuxtRouteMiddleware((to, from) => {
-    console.log('to', to);
-    console.log('from', from);
+    console.log("to", to);
+    console.log("from", from);
   }),
   pageTransition: false,
 });
@@ -24,7 +24,7 @@ definePageMeta({
 const route = useRoute();
 
 const enableCustomLayout = () => {
-  route.meta.layout = 'custom';
+  route.meta.layout = "custom";
 };
 
 const counter = useCount();

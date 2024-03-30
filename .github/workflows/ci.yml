@@ -37,7 +37,7 @@ jobs:
         run: npm i g @rollup/rollup-linux-x64-gnu
       - name: run 'npm ci'
         run: npm ci
-      - name: run ESLint
+      - name: run Formatter & Linter
         run: npm run lint
       - name: run build
         run: npm run build
