@@ -33,6 +33,8 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - name: workaround
+        run: npm i g @rollup/rollup-linux-x64-gnu
       - name: run 'npm install'
         run: npm install
       - name: run ESLint
