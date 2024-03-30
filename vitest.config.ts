@@ -10,7 +10,7 @@ export default defineConfig({
     outputFile: './reports/junit.xml',
     coverage: {
       enabled: true,
-      provider: 'c8',
+      provider: 'v8',
       reporter: ['text', 'cobertura', 'html'],
       reportsDirectory: './reports/coverage',
       include: ['src/**'],
