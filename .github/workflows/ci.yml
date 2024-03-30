@@ -33,10 +33,10 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: workaround
+      - name: workaround npm/cli#4828
         run: npm i g @rollup/rollup-linux-x64-gnu
-      - name: run 'npm install'
-        run: npm install
+      - name: run 'npm ci'
+        run: npm ci
       - name: run ESLint
         run: npm run lint
       - name: run build
