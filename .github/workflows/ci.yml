@@ -25,7 +25,7 @@ jobs:
         run: npm audit --audit-level moderate
 
   setupAndValidate:
-    runs-on: ubuntu-latest
+    runs-on: codebuild-<project-name>-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js 20
