@@ -15,10 +15,10 @@
     "@nuxtjs/tailwindcss": "6.11.4",
     "@testing-library/jest-dom": "6.4.2",
     "@testing-library/vue": "8.0.3",
-    "@vitest/coverage-v8": "1.4.0",
+    "@vitest/coverage-v8": "3.0.8",
     "jsdom": "24.0.0",
     "nuxt": "3.11.2",
     "typescript": "5.4.4",
-    "vitest": "1.4.0"
+    "vitest": "3.0.8"
   }
 }
