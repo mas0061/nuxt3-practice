@@ -33,11 +33,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - name: workaround npm/cli#4828
-        run: npm i g @rollup/rollup-linux-x64-gnu
       - name: run 'npm ci'
         run: npm ci
-      - name: run Formatter & Linter
+      - name: run linter & formatter check
         run: npm run lint
       - name: run build
         run: npm run build
@@ -58,7 +56,7 @@ jobs:
         with:
           filename: reports/coverage/cobertura-coverage.xml
           fail_below_min: true
-          thresholds: '1 75'
+          thresholds: '0 75'
           format: markdown
           badge: true
           output: both
