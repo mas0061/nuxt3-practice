@@ -22,7 +22,7 @@ jobs:
           node-version: 20
           cache: npm
       - name: run 'npm audit'
-        run: npm audit --audit-level high
+        run: npm audit --audit-level moderate
 
   setupAndValidate:
     runs-on: ubuntu-latest
