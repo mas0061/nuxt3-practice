@@ -1,0 +1,44 @@
+name: NPM Audit Fix
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'target branch'
+        required: true
+        type: string
+
+jobs:
+  npm-audit-fix:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        id: install
+        run: npm install
+        continue-on-error: true
+
+      - name: Run npm audit fix
+        id: audit-fix
+        run: npm audit fix || exit 1
+
+      - name: Commit and push changes if needed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+          else
+            echo "Changes detected, committing and pushing..."
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add .
+            git commit -m "fix: apply npm audit fix"
+            git push origin ${{ github.event.inputs.branch }}
+          fi
