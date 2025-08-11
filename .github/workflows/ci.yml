@@ -16,7 +16,7 @@ jobs:
       - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.19.4
           cache: npm
       - name: run 'npm audit'
         run: npm audit --audit-level moderate
@@ -28,7 +28,7 @@ jobs:
       - name: Use Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 20.19.4
           cache: npm
       - name: run 'npm ci'
         run: npm ci
